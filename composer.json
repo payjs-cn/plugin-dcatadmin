@@ -1,0 +1,31 @@
+{
+    "name": "payjs-cn/plugin-dcatadmin",
+    "description": "Dcatadmin 对接 PAYJS 插件",
+    "type": "library",
+    "keywords": ["dcat-admin", "extension", "payjs"],
+    "homepage": "https://github.com/payjs-cn/plugin-dcatadmin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "dedemao",
+            "email": "884358@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "dcat/laravel-admin": "2.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Payjs\\Payjs\\": "src/"
+        }
+    },
+    "extra": {
+        "dcat-admin": "Payjs\\Payjs\\DcatAdminPayjsServiceProvider",
+        "laravel": {
+            "providers": [
+                "Payjs\\Payjs\\DcatAdminPayjsServiceProvider"
+            ]
+        }
+    }
+}
